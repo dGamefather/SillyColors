@@ -1,5 +1,7 @@
 package ctec.sillycolors.controller;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,6 +17,7 @@ public class SillyActivity extends Activity
 	private Button appButton;
 	private TextView appText;
 	private RelativeLayout appLayout;
+	private ArrayList<Integer> colorsList;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -26,7 +29,20 @@ public class SillyActivity extends Activity
 		appText = (TextView) findViewById(R.id.someTextStuff);
 		appLayout = (RelativeLayout) findViewById(R.id.appLayout);
 		
+		colorsList = new ArrayList<Integer>();
+		
+		fillTheColors();
 		heyListen();
+	}
+	
+	private void fillTheColors()
+	{
+		colorsList.add(R.color.tardisBlue);
+		colorsList.add(R.color.kerriganPurple);
+		colorsList.add(R.color.raynorBlack);
+		colorsList.add(R.color.annoyingOrange);
+		colorsList.add(R.color.linkTunicGreen);
+		colorsList.add(R.color.dominionRed);
 	}
 	
 	private void heyListen()
@@ -38,11 +54,6 @@ public class SillyActivity extends Activity
 			public void onClick(View v)
 			{
 				appLayout.setBackgroundResource(R.color.kerriganPurple);
-				appLayout.setBackgroundResource(R.color.dominionRed);
-				appLayout.setBackgroundResource(R.color.raynorBlack);
-				appLayout.setBackgroundResource(R.color.tardisBlue);
-				appLayout.setBackgroundResource(R.color.linkTunicGreen);
-				appLayout.setBackgroundResource(R.color.annoyingOrange);
 			}
 		});
 	}
