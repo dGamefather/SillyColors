@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Silly Colors</string>
+    <string name="labelText">*MEEP*</string>
+    <string name="funnyText">LOL!  *CACKLE*</string>
+    <string name="sarcasticText">ha!</string>
+    <string name="soundsText">*BOOM!*</string>
+
+</resources>
