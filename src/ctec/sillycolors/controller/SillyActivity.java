@@ -37,7 +37,12 @@ public class SillyActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				appLayout.setBackgroundResource(R.color.kerriganPurple);				
+				appLayout.setBackgroundResource(R.color.kerriganPurple);
+				appLayout.setBackgroundResource(R.color.dominionRed);
+				appLayout.setBackgroundResource(R.color.raynorBlack);
+				appLayout.setBackgroundResource(R.color.tardisBlue);
+				appLayout.setBackgroundResource(R.color.linkTunicGreen);
+				appLayout.setBackgroundResource(R.color.annoyingOrange);
 			}
 		});
 	}
