@@ -18,6 +18,7 @@ public class SillyActivity extends Activity
 	private TextView appText;
 	private RelativeLayout appLayout;
 	private ArrayList<Integer> colorsList;
+	private ArrayList<Integer> soundsList;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -30,8 +31,10 @@ public class SillyActivity extends Activity
 		appLayout = (RelativeLayout) findViewById(R.id.appLayout);
 		
 		colorsList = new ArrayList<Integer>();
+		soundsList = new ArrayList<Integer>();
 		
 		fillTheColors();
+		hearTheSounds();
 		heyListen();
 	}
 	
@@ -45,6 +48,13 @@ public class SillyActivity extends Activity
 		colorsList.add(R.color.dominionRed);
 	}
 	
+	private void hearTheSounds()
+	{
+		soundsList.add(R.string.sarcasticText);
+		soundsList.add(R.string.soundsText);
+		soundsList.add(R.string.labelText);
+	}
+	
 	private void heyListen()
 	{
 		appButton.setOnClickListener(new View.OnClickListener()
@@ -53,7 +63,11 @@ public class SillyActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				appLayout.setBackgroundColor(colorsList);
+				int randomPosition = (int) (Math.random() * colorsList.size());
+				int randomBeep = (int) (Math.random() * soundsList.size());
+				appLayout.setBackgroundResource(colorsList.get(randomPosition));
+				appText.setText(soundsList.get(randomBeep));
+				appText.setVisibility(0);
 			}
 		});
 	}
