@@ -20,6 +20,14 @@ public class SillyActivity extends Activity
 	private ArrayList<Integer> colorsList;
 	private ArrayList<Integer> soundsList;
 	
+	/**
+	 * Creates the app screen.
+	 * 
+	 * @param onCreate
+	 *            The creation of the app screen.
+	 * @version 1.1 10/14/2014
+	 * @author Brennan Litster
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -38,6 +46,14 @@ public class SillyActivity extends Activity
 		heyListen();
 	}
 	
+	/**
+	 * Creates the list of colors to change the screen background.
+	 * 
+	 * @param fillTheColors()
+	 *            The list of colors.
+	 * @version 1.1 10/14/2014
+	 * @author Brennan Litster
+	 */
 	private void fillTheColors()
 	{
 		colorsList.add(R.color.tardisBlue);
@@ -48,6 +64,14 @@ public class SillyActivity extends Activity
 		colorsList.add(R.color.dominionRed);
 	}
 	
+	/**
+	 * Creates the list of texts.
+	 * 
+	 * @param hearTheSounds()
+	 *            The list of text.
+	 * @version 1.1 10/14/2014
+	 * @author Brennan Litster
+	 */
 	private void hearTheSounds()
 	{
 		soundsList.add(R.string.sarcasticText);
@@ -55,6 +79,14 @@ public class SillyActivity extends Activity
 		soundsList.add(R.string.labelText);
 	}
 	
+	/**
+	 * Gives functionality to the button.
+	 * 
+	 * @param heyListen()
+	 *            Allows button to do something.
+	 * @version 1.1 10/14/2014
+	 * @author Brennan Litster
+	 */
 	private void heyListen()
 	{
 		appButton.setOnClickListener(new View.OnClickListener()
